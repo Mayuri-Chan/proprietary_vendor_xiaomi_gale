@@ -509,8 +509,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gale/proprietary/vendor/firmware/WMT_SOC.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/WMT_SOC.cfg \
     vendor/xiaomi/gale/proprietary/vendor/firmware/awinic_params.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/awinic_params.bin \
     vendor/xiaomi/gale/proprietary/vendor/firmware/awinic_sinwave_params.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/awinic_sinwave_params.bin \
-    vendor/xiaomi/gale/proprietary/vendor/firmware/chipone_firmware.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/chipone_firmware.bin \
-    vendor/xiaomi/gale/proprietary/vendor/firmware/focaltech_ts_fw_boe.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/focaltech_ts_fw_boe.bin \
     vendor/xiaomi/gale/proprietary/vendor/firmware/fs1801.fsm:$(TARGET_COPY_OUT_VENDOR)/firmware/fs1801.fsm \
     vendor/xiaomi/gale/proprietary/vendor/firmware/gt1151_default_firmware2.img:$(TARGET_COPY_OUT_VENDOR)/firmware/gt1151_default_firmware2.img \
     vendor/xiaomi/gale/proprietary/vendor/firmware/gt9886_cfg_6781v01.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/gt9886_cfg_6781v01.bin \
@@ -543,9 +541,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gale/proprietary/vendor/firmware/lib3a.ccu:$(TARGET_COPY_OUT_VENDOR)/firmware/lib3a.ccu \
     vendor/xiaomi/gale/proprietary/vendor/firmware/mt6631_fm_v1_coeff.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mt6631_fm_v1_coeff.bin \
     vendor/xiaomi/gale/proprietary/vendor/firmware/mt6631_fm_v1_patch.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mt6631_fm_v1_patch.bin \
-    vendor/xiaomi/gale/proprietary/vendor/firmware/novatek_ts_hdl_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_hdl_fw.bin \
-    vendor/xiaomi/gale/proprietary/vendor/firmware/novatek_ts_hdl_mp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts_hdl_mp.bin \
-    vendor/xiaomi/gale/proprietary/vendor/firmware/omnivision_hdl_firmware.img:$(TARGET_COPY_OUT_VENDOR)/firmware/omnivision_hdl_firmware.img \
     vendor/xiaomi/gale/proprietary/vendor/firmware/ovt_tcm_cap_limits.csv:$(TARGET_COPY_OUT_VENDOR)/firmware/ovt_tcm_cap_limits.csv \
     vendor/xiaomi/gale/proprietary/vendor/firmware/remoteproc_scp:$(TARGET_COPY_OUT_VENDOR)/firmware/remoteproc_scp \
     vendor/xiaomi/gale/proprietary/vendor/firmware/soc1_0_patch_mcu_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc1_0_patch_mcu_1a_1_hdr.bin \
