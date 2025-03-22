@@ -911,7 +911,6 @@ PRODUCT_PACKAGES += \
     sc202cs_sunny_marco_i_mipi_raw_tuning \
     sc202cs_sunny_marco_i_mipi_raw_xts_IdxMgr \
     sc202cs_sunny_marco_i_mipi_raw_xts_tuning \
-    sensors.touch.detect \
     tms-cos-dl-common \
     tms-cos-dl-ree \
     tms-utils \
