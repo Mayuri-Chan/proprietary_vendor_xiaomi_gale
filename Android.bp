@@ -13875,7 +13875,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwvhidl",
+    name: "libwvaidl",
     owner: "xiaomi",
     strip: {
         none: true,
@@ -13883,20 +13883,14 @@ cc_prebuilt_library_shared {
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/lib64/libwvhidl.so",
+                "proprietary/vendor/lib64/libwvaidl.so",
             ],
             shared_libs: [
-                "android.hardware.drm@1.0",
-                "android.hardware.drm@1.1",
-                "android.hardware.drm@1.2",
-                "android.hardware.drm@1.3",
-                "android.hardware.drm@1.4",
-                "android.hidl.memory@1.0",
+                "android.hardware.drm-V1-ndk",
                 "libbase",
+                "libbinder_ndk",
                 "libcrypto",
                 "libcutils",
-                "libhidlbase",
-                "libhidlmemory",
                 "liblog",
                 "libprotobuf-cpp-lite-3.9.1-vendorcompat",
                 "libutils",
@@ -13963,38 +13957,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwvdrmengine",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/mediadrm/libwvdrmengine.so",
-            ],
-            shared_libs: [
-                "libbase",
-                "libcrypto",
-                "libhidlbase",
-                "liblog",
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
-                "libstagefright_foundation",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    relative_install_path: "mediadrm",
     prefer: true,
     soc_specific: true,
 }
@@ -15299,6 +15261,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.netdagent-V1-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.netdagent@1.0",
     owner: "xiaomi",
     strip: {
@@ -16045,6 +16032,24 @@ dex_import {
 }
 
 prebuilt_etc_xml {
+    name: "CommandService.xml",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/vintf/manifest/CommandService.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "android.hardware.tetheroffload-V1-service.xml",
+    owner: "xiaomi",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.tetheroffload-V1-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "gnss-mtk.xml",
     owner: "xiaomi",
     src: "proprietary/vendor/etc/vintf/manifest/gnss-mtk.xml",
@@ -16063,9 +16068,9 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "manifest_android.hardware.drm@1.4-service.widevine.xml",
+    name: "manifest_android.hardware.drm-service.widevine.xml",
     owner: "xiaomi",
-    src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml",
+    src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -16286,25 +16291,20 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.drm@1.4-service.widevine",
+    name: "android.hardware.drm-service.widevine",
     owner: "xiaomi",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.drm@1.4-service.widevine",
+                "proprietary/vendor/bin/hw/android.hardware.drm-service.widevine",
             ],
             shared_libs: [
-                "android.hardware.drm@1.0",
-                "android.hardware.drm@1.1",
-                "android.hardware.drm@1.2",
-                "android.hardware.drm@1.3",
+                "android.hardware.drm-V1-ndk",
                 "libbase",
-                "libhidlbase",
                 "liblog",
                 "libutils",
-                "libbinder",
-                "android.hardware.drm@1.4",
-                "libwvhidl",
+                "libwvaidl",
+                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
