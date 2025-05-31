@@ -13643,37 +13643,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtlcWidevineModularDrm",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libtlcWidevineModularDrm.so",
-            ],
-            shared_libs: [
-                "libTEECommon",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libion_mtk",
-                "libion",
-                "libdmabufheap",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libtrm",
     owner: "xiaomi",
     strip: {
@@ -13686,36 +13655,6 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libmtkrillog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "liburee_meta_drmkeyinstall",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/liburee_meta_drmkeyinstall.so",
-            ],
-            shared_libs: [
-                "libTEECommon",
-                "libcutils",
-                "libnetutils",
-                "liblog",
-                "libion",
-                "libion_mtk",
                 "libc++",
                 "libc",
                 "libm",
@@ -13862,93 +13801,6 @@ cc_prebuilt_library_shared {
                 "libmtknetcap",
                 "libmtkutils",
                 "libccci_util",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwvaidl",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libwvaidl.so",
-            ],
-            shared_libs: [
-                "android.hardware.drm-V1-ndk",
-                "libbase",
-                "libbinder_ndk",
-                "libcrypto",
-                "libcutils",
-                "liblog",
-                "libprotobuf-cpp-lite-3.9.1-vendorcompat",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwvkeybox",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libwvkeybox.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libxml2",
-                "liboemcrypto",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libwvkeyboxext",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libwvkeyboxext.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libTEECommon",
-                "libwvkeybox",
                 "libc++",
                 "libc",
                 "libm",
@@ -15955,6 +15807,14 @@ cc_prebuilt_library_shared {
     system_ext_specific: true,
 }
 
+prebuilt_apex {
+    name: "com.google.android.widevine.nonupdatable",
+    owner: "xiaomi",
+    src: "proprietary/vendor/apex/com.google.android.widevine.nonupdatable.apex",
+    filename: "com.google.android.widevine.nonupdatable.apex",
+    soc_specific: true,
+}
+
 android_app_import {
     name: "ImsService",
     owner: "xiaomi",
@@ -16062,15 +15922,6 @@ prebuilt_etc_xml {
     name: "gnss@2.1-service.xml",
     owner: "xiaomi",
     src: "proprietary/vendor/etc/vintf/manifest/gnss@2.1-service.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
-    name: "manifest_android.hardware.drm-service.widevine.xml",
-    owner: "xiaomi",
-    src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -16274,37 +16125,6 @@ cc_prebuilt_binary {
                 "libhidltransport",
                 "android.hardware.bluetooth@1.0",
                 "android.hardware.bluetooth@1.1",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "android.hardware.drm-service.widevine",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.drm-service.widevine",
-            ],
-            shared_libs: [
-                "android.hardware.drm-V1-ndk",
-                "libbase",
-                "liblog",
-                "libutils",
-                "libwvaidl",
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",

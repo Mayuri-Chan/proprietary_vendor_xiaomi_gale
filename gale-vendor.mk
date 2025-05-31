@@ -359,7 +359,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gale/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml \
     vendor/xiaomi/gale/proprietary/vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc \
-    vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.drm-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm-service.widevine.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc \
@@ -868,17 +867,12 @@ PRODUCT_PACKAGES += \
     libsysenv \
     libthha \
     libthhclient \
-    libtlcWidevineModularDrm \
     libtrm \
-    liburee_meta_drmkeyinstall \
     libvia-ril \
     libviagpsrpc \
     libviamipc-ril \
     libwifi-hal-mtk \
     libwpfa \
-    libwvaidl \
-    libwvkeybox \
-    libwvkeyboxext \
     libmtkcam_streaminfo_plugin-p1stt \
     nfc_nci.thn31nfc.tms \
     ov50d40_truly_main_i_mipi_raw_IdxMgr \
@@ -948,6 +942,7 @@ PRODUCT_PACKAGES += \
     libvt_avsync \
     vendor.mediatek.hardware.videotelephony-V1-ndk \
     vendor.mediatek.hardware.videotelephony@1.0 \
+    com.google.android.widevine.nonupdatable \
     ImsService \
     mediatek-common \
     mediatek-framework \
@@ -961,7 +956,6 @@ PRODUCT_PACKAGES += \
     android.hardware.tetheroffload-V1-service.xml \
     gnss-mtk.xml \
     gnss@2.1-service.xml \
-    manifest_android.hardware.drm-service.widevine.xml \
     manifest_media_c2_V1_2_default.xml \
     bp_kmsetkey_ca \
     ccci_mdinit \
@@ -970,7 +964,6 @@ PRODUCT_PACKAGES += \
     fuelgauged_nvram \
     gsm0710muxd \
     android.hardware.bluetooth@1.1-service-mediatek \
-    android.hardware.drm-service.widevine \
     android.hardware.gnss-service.mediatek \
     android.hardware.graphics.allocator@4.0-service-mediatek \
     android.hardware.keymaster@4.1-service.beanpod \
