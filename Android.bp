@@ -13,6 +13,65 @@ soong_namespace {
 }
 
 cc_prebuilt_library_shared {
+    name: "7816-3-T1",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/7816-3-T1.so",
+            ],
+            shared_libs: [
+                "vendor.tms.tmsnfc@1.0",
+                "vendor.tms.tmsnfc_aidl-V1-ndk",
+                "libbinder_ndk",
+                "libcutils",
+                "libhardware",
+                "libhidlbase",
+                "libutils",
+                "liblog",
+                "libbase",
+                "android.hardware.nfc@1.0",
+                "libutilscallstack",
+                "tms-utils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/7816-3-T1.so",
+            ],
+            shared_libs: [
+                "vendor.tms.tmsnfc@1.0",
+                "vendor.tms.tmsnfc_aidl-V1-ndk",
+                "libbinder_ndk",
+                "libcutils",
+                "libhardware",
+                "libhidlbase",
+                "libutils",
+                "liblog",
+                "libbase",
+                "android.hardware.nfc@1.0",
+                "libutilscallstack",
+                "tms-utils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "arm.graphics-V1-ndk_platform",
     owner: "xiaomi",
     strip: {
@@ -2805,6 +2864,169 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "tms-cos-dl-common",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/tms-cos-dl-common.so",
+            ],
+            shared_libs: [
+                "vendor.tms.tmsnfc@1.0",
+                "vendor.tms.tmsnfc_aidl-V1-ndk",
+                "libbinder_ndk",
+                "libcutils",
+                "libhardware",
+                "libhidlbase",
+                "libutils",
+                "liblog",
+                "libbase",
+                "tms-utils",
+                "7816-3-T1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/tms-cos-dl-common.so",
+            ],
+            shared_libs: [
+                "vendor.tms.tmsnfc@1.0",
+                "vendor.tms.tmsnfc_aidl-V1-ndk",
+                "libbinder_ndk",
+                "libcutils",
+                "libhardware",
+                "libhidlbase",
+                "libutils",
+                "liblog",
+                "libbase",
+                "tms-utils",
+                "7816-3-T1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "tms-cos-dl-ree",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/tms-cos-dl-ree.so",
+            ],
+            shared_libs: [
+                "vendor.tms.tmsnfc@1.0",
+                "vendor.tms.tmsnfc_aidl-V1-ndk",
+                "libbinder_ndk",
+                "libcutils",
+                "libhardware",
+                "libhidlbase",
+                "libutils",
+                "liblog",
+                "libbase",
+                "android.hardware.nfc@1.0",
+                "libutilscallstack",
+                "tms-utils",
+                "tms-cos-dl-common",
+                "7816-3-T1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/tms-cos-dl-ree.so",
+            ],
+            shared_libs: [
+                "vendor.tms.tmsnfc@1.0",
+                "vendor.tms.tmsnfc_aidl-V1-ndk",
+                "libbinder_ndk",
+                "libcutils",
+                "libhardware",
+                "libhidlbase",
+                "libutils",
+                "liblog",
+                "libbase",
+                "android.hardware.nfc@1.0",
+                "libutilscallstack",
+                "tms-utils",
+                "tms-cos-dl-common",
+                "7816-3-T1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "tms-utils",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/tms-utils.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/tms-utils.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.audio@6.1",
     owner: "xiaomi",
     strip: {
@@ -4494,6 +4716,86 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.tms.tmsnfc@1.0",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.tms.tmsnfc@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.tms.tmsnfc@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.tms.tmsnfc_aidl-V1-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.tms.tmsnfc_aidl-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.tms.tmsnfc_aidl-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "AVCSecureVdecCA",
     owner: "xiaomi",
     strip: {
@@ -5939,41 +6241,6 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "7816-3-T1",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/7816-3-T1.so",
-            ],
-            shared_libs: [
-                "vendor.tms.tmsnfc@1.0",
-                "libbinder_ndk",
-                "libcutils",
-                "libhardware",
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libbase",
-                "android.hardware.nfc@1.0",
-                "libutilscallstack",
-                "tms-utils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
     prefer: true,
     soc_specific: true,
 }
@@ -14004,11 +14271,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/nfc_nci.thn31nfc.tms.so",
             ],
             shared_libs: [
-                "libbase_shim",
-                "android.hardware.nfc@1.0",
-                "android.hardware.nfc@1.1",
-                "android.hardware.nfc@1.2",
-                "android.hardware.secure_element@1.0",
                 "libbase",
                 "libcutils",
                 "libhardware",
@@ -14016,7 +14278,6 @@ cc_prebuilt_library_shared {
                 "libhidlbase",
                 "liblog",
                 "libutils",
-                "vendor.tms.tmsnfc@1.0",
                 "tms-utils",
                 "tms-cos-dl-common",
                 "tms-cos-dl-ree",
@@ -14769,106 +15030,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "tms-cos-dl-common",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/tms-cos-dl-common.so",
-            ],
-            shared_libs: [
-                "vendor.tms.tmsnfc@1.0",
-                "libbinder_ndk",
-                "libcutils",
-                "libhardware",
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libbase",
-                "tms-utils",
-                "7816-3-T1",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "tms-cos-dl-ree",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/tms-cos-dl-ree.so",
-            ],
-            shared_libs: [
-                "vendor.tms.tmsnfc@1.0",
-                "libbinder_ndk",
-                "libcutils",
-                "libhardware",
-                "libhidlbase",
-                "libutils",
-                "liblog",
-                "libbase",
-                "android.hardware.nfc@1.0",
-                "libutilscallstack",
-                "tms-utils",
-                "tms-cos-dl-common",
-                "7816-3-T1",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "tms-utils",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/tms-utils.so",
-            ],
-            shared_libs: [
-                "libbase_shim",
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libbase",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.camera.atms@1.0",
     owner: "xiaomi",
     strip: {
@@ -15357,34 +15518,6 @@ cc_prebuilt_library_shared {
                 "android.hardware.power@1.0",
                 "android.hardware.power@1.1",
                 "android.hardware.power@1.2",
-                "libhidlbase",
-                "liblog",
-                "libutils",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "vendor.tms.tmsnfc@1.0",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.tms.tmsnfc@1.0.so",
-            ],
-            shared_libs: [
                 "libhidlbase",
                 "liblog",
                 "libutils",
@@ -16472,26 +16605,25 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "android.hardware.nfc@1.2-service-tms",
+    name: "android.hardware.nfc-service-tms",
     owner: "xiaomi",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service-tms",
+                "proprietary/vendor/bin/hw/android.hardware.nfc-service-tms",
             ],
             shared_libs: [
-                "nfc_nci.thn31nfc.tms",
                 "libbase",
-                "libcutils",
-                "libhardware",
                 "liblog",
                 "libutils",
-                "android.hardware.nfc@1.0",
-                "android.hardware.nfc@1.1",
-                "android.hardware.nfc@1.2",
-                "libhidlbase",
-                "vendor.tms.tmsnfc@1.0",
+                "libbinder_ndk",
+                "android.hardware.nfc-V1-ndk",
+                "nfc_nci.thn31nfc.tms",
+                "libhardware",
+                "libhardware_legacy",
+                "vendor.tms.tmsnfc_aidl-V1-ndk",
                 "tms-utils",
+                "libcutils",
                 "libc++",
                 "libc",
                 "libm",
