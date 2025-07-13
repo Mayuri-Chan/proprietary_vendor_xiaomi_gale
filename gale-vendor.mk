@@ -364,7 +364,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
-    vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.nfc@1.2-service-tms.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.nfc@1.2-service-tms.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.tetheroffload-V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.tetheroffload-V1-service.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
@@ -375,8 +374,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.cccirpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccirpcd.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.thermal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermal.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.thermalloadalgod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermalloadalgod.rc \
-    vendor/xiaomi/gale/proprietary/vendor/etc/init/init.thn31.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thn31.nfc.rc \
-    vendor/xiaomi/gale/proprietary/vendor/etc/init/init.thn31.se.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thn31.se.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.volte_imcb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_imcb.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.volte_imsm_93.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_imsm_93.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.volte_md_status.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_md_status.rc \
@@ -632,7 +629,6 @@ PRODUCT_PACKAGES += \
     libvpud_vcodec \
     libvt_custom \
     vendor.mediatek.hardware.rcs@2.0 \
-    7816-3-T1 \
     android.hardware.camera.provider@2.6-impl-mediatek \
     android.hardware.gnss-impl-mediatek \
     android.hardware.gnss@2.1-impl-mediatek \
@@ -880,7 +876,6 @@ PRODUCT_PACKAGES += \
     libwvkeybox \
     libwvkeyboxext \
     libmtkcam_streaminfo_plugin-p1stt \
-    nfc_nci.thn31nfc.tms \
     ov50d40_truly_main_i_mipi_raw_IdxMgr \
     ov50d40_truly_main_i_mipi_raw_tuning \
     ov50d40_truly_main_i_mipi_raw_xts_IdxMgr \
@@ -910,9 +905,6 @@ PRODUCT_PACKAGES += \
     sc202cs_sunny_marco_i_mipi_raw_xts_IdxMgr \
     sc202cs_sunny_marco_i_mipi_raw_xts_tuning \
     sensors.touch.detect \
-    tms-cos-dl-common \
-    tms-cos-dl-ree \
-    tms-utils \
     vendor.mediatek.hardware.camera.atms@1.0 \
     vendor.mediatek.hardware.camera.bgservice@1.0 \
     vendor.mediatek.hardware.camera.bgservice@1.1 \
@@ -930,6 +922,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.netdagent@1.0 \
     vendor.mediatek.hardware.power@1.1 \
     vendor.mediatek.hardware.power@2.0 \
+    vendor.tms.nfc-V1-ndk \
     vendor.tms.tmsnfc@1.0 \
     wechat.beanpod \
     libcomutils \
@@ -948,6 +941,11 @@ PRODUCT_PACKAGES += \
     libvt_avsync \
     vendor.mediatek.hardware.videotelephony-V1-ndk \
     vendor.mediatek.hardware.videotelephony@1.0 \
+    7816-3-T1 \
+    nfc_nci.thn31nfc.tms \
+    tms-cos-dl-common \
+    tms-cos-dl-ree \
+    tms-utils \
     ImsService \
     mediatek-common \
     mediatek-framework \
@@ -975,7 +973,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-service-mediatek \
     android.hardware.keymaster@4.1-service.beanpod \
     android.hardware.media.c2@1.2-mediatek-64b \
-    android.hardware.nfc@1.2-service-tms \
     android.hardware.secure_element@1.2-service-mediatek \
     camerahalserver \
     mtkfusionrild \
@@ -1008,7 +1005,8 @@ PRODUCT_PACKAGES += \
     wlan_assistant \
     wmt_launcher \
     wmt_loader \
-    vtservice
+    vtservice \
+    android.hardware.nfc@1.2-service-tms
 
 PRODUCT_PACKAGES += \
     vendor_bin_hw_android_hardware_media_c2@1_2-mediatek \
