@@ -15481,6 +15481,7 @@ cc_prebuilt_library_shared {
                 "libstagefright_foundation",
                 "libui",
                 "libutils",
+                "libsink-mtk",
                 "libsource",
                 "libvcodec_cap",
                 "libimsma_rtp",
@@ -15718,6 +15719,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libsink-mtk.so",
             ],
             shared_libs: [
+                "libshim_sink",
                 "libaudioclient_shim",
                 "libbinder",
                 "libcutils",
