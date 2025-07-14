@@ -6,7 +6,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/gale
 
 PRODUCT_COPY_FILES += \
-    vendor/xiaomi/gale/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
+    vendor/xiaomi/gale/proprietary/system/etc/permissions/com.tms.cosdl.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.tms.cosdl.xml \
+    vendor/xiaomi/gale/proprietary/system/etc/permissions/com.tms.nfc.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.tms.nfc.xml \
     vendor/xiaomi/gale/proprietary/vendor/etc/SEC_THN31_FW_VTP.txt.bin:$(TARGET_COPY_OUT_VENDOR)/etc/SEC_THN31_FW_VTP.txt.bin \
     vendor/xiaomi/gale/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
     vendor/xiaomi/gale/proprietary/vendor/etc/audio_param/AudioParamOptions_vext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions_vext.xml \
@@ -364,7 +365,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2@1.2-mediatek.rc \
-    vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.nfc@1.2-service-tms.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.nfc@1.2-service-tms.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/android.hardware.tetheroffload-V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.tetheroffload-V1-service.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
@@ -375,8 +375,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.cccirpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.cccirpcd.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.thermal.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermal.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.thermalloadalgod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermalloadalgod.rc \
-    vendor/xiaomi/gale/proprietary/vendor/etc/init/init.thn31.nfc.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thn31.nfc.rc \
-    vendor/xiaomi/gale/proprietary/vendor/etc/init/init.thn31.se.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thn31.se.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.volte_imcb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_imcb.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.volte_imsm_93.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_imsm_93.rc \
     vendor/xiaomi/gale/proprietary/vendor/etc/init/init.volte_md_status.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.volte_md_status.rc \
@@ -926,38 +924,21 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.composer_ext@1.0 \
     vendor.mediatek.hardware.mtkradioex@2.0 \
     vendor.mediatek.hardware.mtkradioex@3.0 \
-    vendor.mediatek.hardware.netdagent-V1-ndk \
     vendor.mediatek.hardware.netdagent@1.0 \
     vendor.mediatek.hardware.power@1.1 \
     vendor.mediatek.hardware.power@2.0 \
     vendor.tms.tmsnfc@1.0 \
+    vendor.tms.tmsnfc_aidl-V1-ndk \
     wechat.beanpod \
-    libcomutils \
-    libimsma \
-    libimsma_adapt \
-    libimsma_rtp \
-    libimsma_socketwrapper \
-    libmtk_vt_service \
-    libmtk_vt_wrapper \
-    libsignal \
-    libsink \
-    libsource \
-    libvcodec_cap \
-    libvcodec_capenc \
-    libvsim-adaptor-client \
-    libvt_avsync \
-    vendor.mediatek.hardware.videotelephony-V1-ndk \
-    vendor.mediatek.hardware.videotelephony@1.0 \
-    ImsService \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-ims-extension-plugin \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common \
-    CommandService.xml \
+    libaudiotoolkit \
+    libem_aoltest_jni \
+    libem_audio_jni \
+    libem_bleoffload_jni \
+    libem_support_jni \
+    libem_wifi_jni \
+    EngineerMode \
+    com.tms.cosdl \
+    com.tms.nfc \
     android.hardware.tetheroffload-V1-service.xml \
     gnss-mtk.xml \
     gnss@2.1-service.xml \
@@ -975,7 +956,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-service-mediatek \
     android.hardware.keymaster@4.1-service.beanpod \
     android.hardware.media.c2@1.2-mediatek-64b \
-    android.hardware.nfc@1.2-service-tms \
+    android.hardware.nfc-service-tms \
     android.hardware.secure_element@1.2-service-mediatek \
     camerahalserver \
     mtkfusionrild \
@@ -1007,8 +988,7 @@ PRODUCT_PACKAGES += \
     vpud \
     wlan_assistant \
     wmt_launcher \
-    wmt_loader \
-    vtservice
+    wmt_loader
 
 PRODUCT_PACKAGES += \
     vendor_bin_hw_android_hardware_media_c2@1_2-mediatek \
