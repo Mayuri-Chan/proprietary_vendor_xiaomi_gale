@@ -930,6 +930,13 @@ PRODUCT_PACKAGES += \
     vendor.tms.tmsnfc@1.0 \
     vendor.tms.tmsnfc_aidl-V1-ndk \
     wechat.beanpod \
+    libaudiotoolkit \
+    libem_aoltest_jni \
+    libem_audio_jni \
+    libem_bleoffload_jni \
+    libem_support_jni \
+    libem_wifi_jni \
+    EngineerMode \
     com.tms.cosdl \
     com.tms.nfc \
     gnss-mtk.xml \
