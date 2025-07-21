@@ -6,6 +6,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/gale
 
 PRODUCT_COPY_FILES += \
+    vendor/xiaomi/gale/proprietary/system/etc/permissions/com.tms.cosdl.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.tms.cosdl.xml \
+    vendor/xiaomi/gale/proprietary/system/etc/permissions/com.tms.nfc.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.tms.nfc.xml \
     vendor/xiaomi/gale/proprietary/vendor/etc/SEC_THN31_FW_VTP.txt.bin:$(TARGET_COPY_OUT_VENDOR)/etc/SEC_THN31_FW_VTP.txt.bin \
     vendor/xiaomi/gale/proprietary/vendor/etc/audio_param/AudioParamOptions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions.xml \
     vendor/xiaomi/gale/proprietary/vendor/etc/audio_param/AudioParamOptions_vext.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions_vext.xml \
@@ -628,6 +630,7 @@ PRODUCT_PACKAGES += \
     libvpud_vcodec \
     libvt_custom \
     vendor.mediatek.hardware.rcs@2.0 \
+    7816-3-T1 \
     android.hardware.camera.provider@2.6-impl-mediatek \
     android.hardware.gnss-impl-mediatek \
     android.hardware.gnss@2.1-impl-mediatek \
@@ -875,6 +878,7 @@ PRODUCT_PACKAGES += \
     libwvkeybox \
     libwvkeyboxext \
     libmtkcam_streaminfo_plugin-p1stt \
+    nfc_nci.thn31nfc.tms \
     ov50d40_truly_main_i_mipi_raw_IdxMgr \
     ov50d40_truly_main_i_mipi_raw_tuning \
     ov50d40_truly_main_i_mipi_raw_xts_IdxMgr \
@@ -904,6 +908,9 @@ PRODUCT_PACKAGES += \
     sc202cs_sunny_marco_i_mipi_raw_xts_IdxMgr \
     sc202cs_sunny_marco_i_mipi_raw_xts_tuning \
     sensors.touch.detect \
+    tms-cos-dl-common \
+    tms-cos-dl-ree \
+    tms-utils \
     vendor.mediatek.hardware.camera.atms@1.0 \
     vendor.mediatek.hardware.camera.bgservice@1.0 \
     vendor.mediatek.hardware.camera.bgservice@1.1 \
@@ -920,14 +927,11 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.netdagent@1.0 \
     vendor.mediatek.hardware.power@1.1 \
     vendor.mediatek.hardware.power@2.0 \
-    vendor.tms.nfc-V1-ndk \
     vendor.tms.tmsnfc@1.0 \
+    vendor.tms.tmsnfc_aidl-V1-ndk \
     wechat.beanpod \
-    7816-3-T1 \
-    nfc_nci.thn31nfc.tms \
-    tms-cos-dl-common \
-    tms-cos-dl-ree \
-    tms-utils \
+    com.tms.cosdl \
+    com.tms.nfc \
     gnss-mtk.xml \
     gnss@2.1-service.xml \
     manifest_android.hardware.drm-service.widevine.xml \
@@ -944,6 +948,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@4.0-service-mediatek \
     android.hardware.keymaster@4.1-service.beanpod \
     android.hardware.media.c2@1.2-mediatek-64b \
+    android.hardware.nfc-service-tms \
     android.hardware.secure_element@1.2-service-mediatek \
     camerahalserver \
     mtkfusionrild \
@@ -975,8 +980,7 @@ PRODUCT_PACKAGES += \
     vpud \
     wlan_assistant \
     wmt_launcher \
-    wmt_loader \
-    android.hardware.nfc@1.2-service-tms
+    wmt_loader
 
 PRODUCT_PACKAGES += \
     vendor_bin_hw_android_hardware_media_c2@1_2-mediatek \
