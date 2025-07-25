@@ -924,7 +924,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.composer_ext@1.0 \
     vendor.mediatek.hardware.mtkradioex@2.0 \
     vendor.mediatek.hardware.mtkradioex@3.0 \
-    vendor.mediatek.hardware.netdagent-V1-ndk \
     vendor.mediatek.hardware.netdagent@1.0 \
     vendor.mediatek.hardware.power@1.1 \
     vendor.mediatek.hardware.power@2.0 \
@@ -940,7 +939,6 @@ PRODUCT_PACKAGES += \
     EngineerMode \
     com.tms.cosdl \
     com.tms.nfc \
-    CommandService.xml \
     android.hardware.tetheroffload-V1-service.xml \
     gnss-mtk.xml \
     gnss@2.1-service.xml \

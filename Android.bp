@@ -15257,31 +15257,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.netdagent-V1-ndk",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.mediatek.hardware.netdagent-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.netdagent@1.0",
     owner: "xiaomi",
     strip: {
@@ -15751,15 +15726,6 @@ dex_import {
     jars: [
         "proprietary/system/framework/com.tms.nfc.jar",
     ],
-}
-
-prebuilt_etc_xml {
-    name: "CommandService.xml",
-    owner: "xiaomi",
-    src: "proprietary/vendor/etc/vintf/manifest/CommandService.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
 }
 
 prebuilt_etc_xml {
@@ -16697,14 +16663,13 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/netdagent",
             ],
             shared_libs: [
-                "libbase",
                 "libcutils",
                 "liblog",
                 "libforkexecwrap",
                 "libutils",
+                "libhidlbase",
                 "libifcutils_mtk",
-                "libbinder_ndk",
-                "vendor.mediatek.hardware.netdagent-V1-ndk",
+                "vendor.mediatek.hardware.netdagent@1.0",
                 "libc++",
                 "libc",
                 "libm",
