@@ -450,7 +450,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gale/proprietary/vendor/firmware/soc1_0_ram_mcu_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc1_0_ram_mcu_1a_1_hdr.bin \
     vendor/xiaomi/gale/proprietary/vendor/firmware/soc1_0_ram_wifi_1a_1_hdr.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/soc1_0_ram_wifi_1a_1_hdr.bin \
     vendor/xiaomi/gale/proprietary/vendor/firmware/wifi.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi.cfg \
-    vendor/xiaomi/gale/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
     vendor/xiaomi/gale/proprietary/vendor/thh/ta/0102030405060708090a0b0c0d0e0f10.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/0102030405060708090a0b0c0d0e0f10.ta \
     vendor/xiaomi/gale/proprietary/vendor/thh/ta/020b0000000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/020b0000000000000000000000000000.ta \
     vendor/xiaomi/gale/proprietary/vendor/thh/ta/020f0000000000000000000000000000.ta:$(TARGET_COPY_OUT_VENDOR)/thh/ta/020f0000000000000000000000000000.ta \
@@ -487,97 +486,24 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gale/proprietary/vendor/thh/ta/isee_model.json:$(TARGET_COPY_OUT_VENDOR)/thh/ta/isee_model.json
 
 PRODUCT_PACKAGES += \
-    arm.graphics-V1-ndk_platform \
-    libGLES_mali \
-    libGLES_meow \
-    libMEOW_data \
-    libMEOW_gift \
-    libMEOW_qt \
-    libMEOW_trace \
-    android.hardware.bluetooth@1.1-impl-mediatek \
-    android.hardware.graphics.allocator@4.0-impl-mediatek \
-    android.hardware.graphics.mapper@4.0-impl-mediatek \
-    vendor.mediatek.hardware.bluetooth.audio@2.2-impl \
-    vendor.mediatek.hardware.pq@2.15-impl \
-    libDefaultFpsActor \
-    libFrameRecord \
-    libNoFpsActor \
-    libOpenCL \
     libTEECommon \
-    libaal_cust \
-    libaal_key \
-    libaal_mtk \
-    libaalservice \
     libaedv \
-    libappgamepq \
-    libbluetooth_audio_session_mediatek \
-    libbluetooth_mtk \
-    libbluetooth_mtk_pure \
-    libbt-vendor \
     libbwc \
     libcustom_nvram \
-    libdre \
     libfile_op \
-    libgamehdr \
-    libged \
-    libgpu_aux \
-    libgpud \
-    libgralloc_extra \
-    libgralloc_metadata \
-    libgralloctypes_mtk \
-    libhdrvideo \
-    libimsg_log \
     libion_mtk \
     libion_ulit \
     libipsec_ims_shr \
     libladder \
-    libmml \
     libmtkcutils \
     libmtkproperty \
     libmtkrillog \
     libnvram \
     libnvram_sec \
-    libpq_cust_base \
-    libpqframework \
-    libpqparamparser \
-    libpqpconfig \
-    libteei_daemon_vfs \
-    libudf \
     libverno \
-    libdpframework \
     libmtk_drvb \
-    libpq_prot \
-    vendor.mediatek.hardware.audio@6.1 \
-    vendor.mediatek.hardware.audio@7.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.2 \
-    vendor.mediatek.hardware.mmagent@1.0 \
-    vendor.mediatek.hardware.mmagent@1.1 \
-    vendor.mediatek.hardware.mms@1.0 \
-    vendor.mediatek.hardware.mms@1.1 \
-    vendor.mediatek.hardware.mms@1.2 \
-    vendor.mediatek.hardware.mms@1.3 \
-    vendor.mediatek.hardware.mms@1.4 \
-    vendor.mediatek.hardware.mms@1.5 \
-    vendor.mediatek.hardware.mms@1.6 \
     vendor.mediatek.hardware.nvram@1.0 \
     vendor.mediatek.hardware.nvram@1.1 \
-    vendor.mediatek.hardware.pq@2.0 \
-    vendor.mediatek.hardware.pq@2.1 \
-    vendor.mediatek.hardware.pq@2.10 \
-    vendor.mediatek.hardware.pq@2.11 \
-    vendor.mediatek.hardware.pq@2.12 \
-    vendor.mediatek.hardware.pq@2.13 \
-    vendor.mediatek.hardware.pq@2.14 \
-    vendor.mediatek.hardware.pq@2.15 \
-    vendor.mediatek.hardware.pq@2.2 \
-    vendor.mediatek.hardware.pq@2.3 \
-    vendor.mediatek.hardware.pq@2.4 \
-    vendor.mediatek.hardware.pq@2.5 \
-    vendor.mediatek.hardware.pq@2.6 \
-    vendor.mediatek.hardware.pq@2.7 \
-    vendor.mediatek.hardware.pq@2.8 \
-    vendor.mediatek.hardware.pq@2.9 \
     vendor.mediatek.hardware.videotelephony@1.0_vendor \
     AVCSecureVdecCA \
     VP9SecureVdecCA \
@@ -629,11 +555,25 @@ PRODUCT_PACKAGES += \
     libvpu5 \
     libvpud_vcodec \
     libvt_custom \
+    vendor.mediatek.hardware.audio@6.1 \
+    vendor.mediatek.hardware.audio@7.1 \
+    vendor.mediatek.hardware.bluetooth.audio@2.1 \
+    vendor.mediatek.hardware.bluetooth.audio@2.2 \
     vendor.mediatek.hardware.rcs@2.0 \
     7816-3-T1 \
+    arm.graphics-V1-ndk_platform \
+    libGLES_mali \
+    libGLES_meow \
+    libMEOW_data \
+    libMEOW_gift \
+    libMEOW_qt \
+    libMEOW_trace \
+    android.hardware.bluetooth@1.1-impl-mediatek \
     android.hardware.camera.provider@2.6-impl-mediatek \
     android.hardware.gnss-impl-mediatek \
     android.hardware.gnss@2.1-impl-mediatek \
+    android.hardware.graphics.allocator@4.0-impl-mediatek \
+    android.hardware.graphics.mapper@4.0-impl-mediatek \
     android.hardware.sensors@2.X-subhal-mediatek \
     fingerprint.fpc.default \
     fingerprint.goodix.default \
@@ -648,6 +588,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.camera.lomoeffect@1.0-impl \
     vendor.mediatek.hardware.mms@1.6-impl \
     vendor.mediatek.hardware.nvram@1.1-impl \
+    vendor.mediatek.hardware.pq@2.15-impl \
     vendor.mediatek.hardware.videotelephony@1.0-impl \
     lc_algoutils \
     lib3a.ae.core \
@@ -663,7 +604,11 @@ PRODUCT_PACKAGES += \
     lib3a.lce \
     lib3a.log \
     libDR \
+    libDefaultFpsActor \
+    libFrameRecord \
     libJpgEncPipe \
+    libNoFpsActor \
+    libOpenCL \
     libQstAlgo \
     libSQLiteModule_VER_ALL \
     libSonyIMX230PdafLibrary \
@@ -676,12 +621,20 @@ PRODUCT_PACKAGES += \
     libSonyIMX519PdafLibraryWrapper \
     libTrueSight \
     lib_bsscore \
+    libaal_cust \
+    libaal_key \
+    libaal_mtk \
+    libaalservice \
     libabfadp \
     libanc_night \
     libanc_night_preview \
     libanc_single_bokeh \
     libanc_single_bokeh_rear \
     libanc_single_rt_bokeh \
+    libappgamepq \
+    libbluetooth_mtk \
+    libbluetooth_mtk_pure \
+    libbt-vendor \
     libc++_shared \
     libcam.chdr \
     libcam.feature_utils \
@@ -736,6 +689,7 @@ PRODUCT_PACKAGES += \
     libcom.xiaomi.pluginutils \
     libcomposer_ext \
     libconnfem \
+    libdre \
     libeffecthal.base \
     libfeature.face \
     libfeature.stereo.provider \
@@ -747,16 +701,25 @@ PRODUCT_PACKAGES += \
     libfeatureiodrv_mem \
     libforkexecwrap \
     libformatter \
+    libgamehdr \
+    libged \
     libgf_ca \
     libgf_hal \
     libgoodixhwfingerprint \
+    libgpu_aux \
+    libgpud \
+    libgralloc_extra \
+    libgralloc_metadata \
+    libgralloctypes_mtk \
     libgz_uree \
+    libhdrvideo \
     libheichal \
     libhwm \
     libifcutils_mtk \
     libimageio \
     libimageio_plat_drv \
     libimageio_plat_pipe \
+    libimsg_log \
     libjpeg-alpha-oal_vendor \
     libjpeg-alpha_vendor \
     libksensor \
@@ -770,6 +733,7 @@ PRODUCT_PACKAGES += \
     libmialgoengine2 \
     libmifpext \
     libmipc \
+    libmml \
     libmnetlink_v104 \
     libmnl \
     libmorpho_HdrChecker \
@@ -854,6 +818,10 @@ PRODUCT_PACKAGES += \
     libnbaio_mono \
     libneuron_runtime.6 \
     liboemcrypto \
+    libpq_cust_base \
+    libpqframework \
+    libpqparamparser \
+    libpqpconfig \
     libratconfig \
     libremosaic_wrapper \
     libremosaiclib \
@@ -864,10 +832,12 @@ PRODUCT_PACKAGES += \
     libstereoinfoaccessor_vsdof \
     libstorage_otp \
     libsysenv \
+    libteei_daemon_vfs \
     libthha \
     libthhclient \
     libtlcWidevineModularDrm \
     libtrm \
+    libudf \
     liburee_meta_drmkeyinstall \
     libvia-ril \
     libviagpsrpc \
@@ -877,6 +847,8 @@ PRODUCT_PACKAGES += \
     libwvaidl \
     libwvkeybox \
     libwvkeyboxext \
+    libdpframework \
+    libpq_prot \
     libmtkcam_streaminfo_plugin-p1stt \
     nfc_nci.thn31nfc.tms \
     ov50d40_truly_main_i_mipi_raw_IdxMgr \
@@ -922,11 +894,36 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.camera.security@1.0 \
     vendor.mediatek.hardware.clientapi@1.0 \
     vendor.mediatek.hardware.composer_ext@1.0 \
+    vendor.mediatek.hardware.mmagent@1.0 \
+    vendor.mediatek.hardware.mmagent@1.1 \
+    vendor.mediatek.hardware.mms@1.0 \
+    vendor.mediatek.hardware.mms@1.1 \
+    vendor.mediatek.hardware.mms@1.2 \
+    vendor.mediatek.hardware.mms@1.3 \
+    vendor.mediatek.hardware.mms@1.4 \
+    vendor.mediatek.hardware.mms@1.5 \
+    vendor.mediatek.hardware.mms@1.6 \
     vendor.mediatek.hardware.mtkradioex@2.0 \
     vendor.mediatek.hardware.mtkradioex@3.0 \
     vendor.mediatek.hardware.netdagent@1.0 \
     vendor.mediatek.hardware.power@1.1 \
     vendor.mediatek.hardware.power@2.0 \
+    vendor.mediatek.hardware.pq@2.0 \
+    vendor.mediatek.hardware.pq@2.1 \
+    vendor.mediatek.hardware.pq@2.10 \
+    vendor.mediatek.hardware.pq@2.11 \
+    vendor.mediatek.hardware.pq@2.12 \
+    vendor.mediatek.hardware.pq@2.13 \
+    vendor.mediatek.hardware.pq@2.14 \
+    vendor.mediatek.hardware.pq@2.15 \
+    vendor.mediatek.hardware.pq@2.2 \
+    vendor.mediatek.hardware.pq@2.3 \
+    vendor.mediatek.hardware.pq@2.4 \
+    vendor.mediatek.hardware.pq@2.5 \
+    vendor.mediatek.hardware.pq@2.6 \
+    vendor.mediatek.hardware.pq@2.7 \
+    vendor.mediatek.hardware.pq@2.8 \
+    vendor.mediatek.hardware.pq@2.9 \
     vendor.tms.tmsnfc@1.0 \
     vendor.tms.tmsnfc_aidl-V1-ndk \
     wechat.beanpod \
@@ -992,10 +989,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     vendor_bin_hw_android_hardware_media_c2@1_2-mediatek \
-    vendor_lib_hw_vulkan_mt6768_so \
-    vendor_lib_libdpframework_so \
     vendor_lib_libmtk_drvb_so \
-    vendor_lib_libpq_prot_so \
     vendor_lib64_hw_vulkan_mt6768_so \
     vendor_lib64_libdpframework_so \
     vendor_lib64_libmtk_drvb_so \
