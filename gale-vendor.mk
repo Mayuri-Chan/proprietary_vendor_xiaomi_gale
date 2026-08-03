@@ -507,7 +507,6 @@ PRODUCT_PACKAGES += \
     AVCSecureVdecCA \
     VP9SecureVdecCA \
     audio.primary.mt6768 \
-    audio.r_submix.mt6768 \
     awinic.audio.effect \
     libMtkSpeechEnh \
     lib_iir \
@@ -556,8 +555,6 @@ PRODUCT_PACKAGES += \
     libvt_custom \
     vendor.mediatek.hardware.audio@6.1 \
     vendor.mediatek.hardware.audio@7.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.2 \
     vendor.mediatek.hardware.rcs@2.0 \
     7816-3-T1 \
     arm.graphics-V1-ndk_platform \
@@ -813,7 +810,6 @@ PRODUCT_PACKAGES += \
     libmtksysutils \
     libmtktinyxml \
     libmtkutils \
-    libnbaio_mono \
     libneuron_runtime.6 \
     liboemcrypto \
     libpq_cust_base \
