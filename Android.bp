@@ -857,6 +857,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/hw/audio.primary.mt6768.so",
             ],
             shared_libs: [
+                "libstagefright_foundation-v33",
                 "libhidlbase",
                 "vendor.mediatek.hardware.mtkpower@1.0",
                 "liblog",
@@ -878,36 +879,6 @@ cc_prebuilt_library_shared {
                 "vendor.mediatek.hardware.audio@7.1",
                 "libbwc",
                 "libaedv",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    relative_install_path: "hw",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "audio.r_submix.mt6768",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/hw/audio.r_submix.mt6768.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libmedia_helper",
-                "libutils",
-                "libnbaio_mono",
                 "libc++",
                 "libc",
                 "libm",
@@ -6156,7 +6127,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libsfplugin_ccodec_utils",
-                "libstagefright_foundation",
+                "libstagefright_foundation-v33",
                 "libbase",
                 "libcodec2",
                 "libcodec2_vndk",
@@ -6202,7 +6173,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libsfplugin_ccodec_utils",
-                "libstagefright_foundation",
+                "libstagefright_foundation-v33",
                 "libbase",
                 "libcodec2",
                 "libcodec2_vndk",
@@ -6251,7 +6222,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "liblog",
                 "libsfplugin_ccodec_utils",
-                "libstagefright_foundation",
+                "libstagefright_foundation-v33",
                 "libbase",
                 "libcodec2",
                 "libcodec2_vndk",
@@ -6286,7 +6257,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcodec2_soft_common",
                 "libsfplugin_ccodec_utils",
-                "libstagefright_foundation",
+                "libstagefright_foundation-v33",
                 "libcodec2",
                 "libcodec2_vndk",
                 "liblog",
@@ -6319,7 +6290,7 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "libcodec2_soft_common",
                 "libsfplugin_ccodec_utils",
-                "libstagefright_foundation",
+                "libstagefright_foundation-v33",
                 "libcodec2",
                 "libcodec2_vndk",
                 "liblog",
@@ -10673,34 +10644,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libnbaio_mono",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libnbaio_mono.so",
-            ],
-            shared_libs: [
-                "libaudioutils",
-                "libcutils",
-                "liblog",
-                "libutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libneuron_runtime.6",
     owner: "xiaomi",
     strip: {
@@ -14515,7 +14458,6 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b",
             ],
             shared_libs: [
-                "libstagefright_foundation-v33",
                 "libbase",
                 "liblog",
                 "libcodec2",

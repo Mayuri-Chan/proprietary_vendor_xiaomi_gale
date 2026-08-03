@@ -507,7 +507,6 @@ PRODUCT_PACKAGES += \
     AVCSecureVdecCA \
     VP9SecureVdecCA \
     audio.primary.mt6768 \
-    audio.r_submix.mt6768 \
     awinic.audio.effect \
     libMtkSpeechEnh \
     lib_iir \
@@ -813,7 +812,6 @@ PRODUCT_PACKAGES += \
     libmtksysutils \
     libmtktinyxml \
     libmtkutils \
-    libnbaio_mono \
     libneuron_runtime.6 \
     liboemcrypto \
     libpq_cust_base \
