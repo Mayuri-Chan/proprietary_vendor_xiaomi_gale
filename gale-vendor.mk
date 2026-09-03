@@ -730,7 +730,7 @@ PRODUCT_PACKAGES += \
     libmipc \
     libmml \
     libmnetlink_v104 \
-    libmnl \
+    libmnl_mtk \
     libmorpho_HdrChecker \
     libmorpho_ImageRefiner \
     libmorpho_ImageRefinerLite \
